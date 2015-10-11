@@ -22,16 +22,16 @@ time, mark, audio, video {
 .container{
     width: 100%;
 	height: 800px;
-	background: pink;
-	border: 2px solid black;
+	background: none;
+	border: 1px solid #ffffff;
 }
 /* Header */
 .header{
 	position: fixed;
 	width: 100%;
 	height: 100px;
-	background: blue;
-	border: 2px solid black;
+	background: #D0F5A9;
+	border: 1px solid #D0F5A9;
 	right: 0;
 	left: 0;
 }
@@ -40,36 +40,74 @@ time, mark, audio, video {
 	float: left;
 	width: 400px;
 	height: 100px;
-	border: 1px solid #111111;
-	text-align: center;
 }	
 .logo img{
-	margin-top: 50px;
+	height: 100px;
+	width: auto;
+	margin-left: 2px;
 }
-
 
 	/* Header - Navigation Bar */
 .nav-bar{	
     width: 400px;
 	height: 50px;
-	background: orange;
-	border: 2px solid black;
+	background: #D0F5A9;
 	float: right;
 	margin-top: 25px;
 	margin-right: 200px;
+	border-radius: 5px;
 }
-.nav-bar ul{
-	font-family: Arial, sans-serif;
-	font-size: 15px;   
-    padding: 12.5px; 
+.nav-bar ul{   
+    font-family: Arial, sans-serif;
+	font-size: 17px;   
+    padding-top: 10px; 
     list-style: none;
-    margin-left: 2px;
+    margin-left: 5px;
 }
+.nav-bar ul li {   
+    display: block;   
+    position: relative;   
+    float: left; 
+   } 
 
-.nav-bar li{
-	display: inline;
-	margin-left: 25px;
-}
+.nav-bar li ul { 
+    display: none; 
+   } 
+
+.nav-bar ul li a {  
+    display: block;  
+    text-decoration: none;  
+    color: black; 
+    padding: 5px 15px 5px 15px;    
+    margin-left: 1px; 
+    white-space: nowrap; 
+} 
+
+.nav-bar ul li a:hover { 
+	 background: green;
+	 color: #3A9CF2;
+     text-decoration: underline;
+     }
+
+.nav-bar li:hover ul {  
+    display: block;   
+    position: absolute; 
+} 
+
+.nav-bar li:hover li {   
+    float: none;  
+    font-size: 15px;
+     } 
+
+.nav-bar li:hover a { 
+	background: green ;
+    color: black;
+     } 
+
+.nav-bar li:hover li a:hover{ 
+	background: green;
+    color: #3A9CF2;
+    }
 	/*Header - Order Btn */
 .order-btn	{
 	float: right;
@@ -80,20 +118,70 @@ time, mark, audio, video {
 .order-btn a{
 	 padding: 15px 50px 15px 50px;
      background: #3A9CF2;
-     border-radius: 3px;
+     border-radius: 3px ridge #3A9CF2;
      color: white;
      text-decoration: none;
      font-family: Arial, sans-serif
+}
+.order-btn a:hover{
+	background:green;
 }
 /* Search Bar */
 .search-bar{
 	float : left;
     width: 500px;
 	height: 40px;
-	background: yellow;
-	border: 2px solid black;
 	margin-top: 110px;
-	margin-left: 20px;
+	margin-left: 67px;
+}
+#search-area{
+	width: 400px;
+	height: 20px;
+	color: #D8D8D8;
+}
+#search-btn{
+	font-size: 12px;
+	padding: 5px 15px 5px 15px;
+    background: #3A9CF2;
+    border-radius: 3px;
+    color: black;
+    text-decoration: none;
+    border: 1px solid #D8D8D8;
+    font-family: Arial, sans-serif;
+    background:#D8D8D8;
+}
+/*social-media*/
+
+.social-media img{
+	width: 35px;
+	height: auto;
+}
+.social-media{
+    float: right;
+	width: 210px;
+	height: 40px;
+	margin-top: 110px;
+	margin-right: 50px;
+}
+
+.linkedIn{
+	margin-left: 0px;
+}
+.facebook{
+	margin-top: -39px;
+	margin-left: 50px;
+}
+.youtube{
+	margin-top: -39px;
+	margin-left: 100px;
+	
+}
+.instagram{
+	margin-top: -39px;
+	margin-left: 150px;
+}
+.social-media a:hover{
+	background: #3A9CF2;
 }
 
 /* Contents */
@@ -101,107 +189,156 @@ time, mark, audio, video {
 	float: none;
     width: 1300px;
 	height:638px;
-	background: magenta;
-	border: 2px solid black;
-	margin-top: 160px;
+	background: #F1F8E0;
+	border: 1px solid #ffffff;
+	margin-top: 150px;
 	margin-right: auto;
 	margin-left: auto;	
 }
+.contents img:hover{
+         border: 5px solid #2ECCFA; 
+     }
 	/*Contents - Thai*/
 	.Thai{
 		float: none;
 		width: 300px;
 		height: 300px;
-		border: 1px solid #111111;
+		border: 1px solid #ffffff;
 		text-align: center;
 		margin-top: 10px;
 		margin-left: 25px;
-
 	}
+    .Thai img{
+    	width: 300px;
+    	height: 300px;
+    } 
+
 	/*Contents - Vietnamese*/
     .Vietnamese{
     	float: none;
 		width: 300px;
 		height: 300px;
-		border: 1px solid #111111;
+		border: 1px solid #ffffff;
 		text-align: center;
 		margin-left: 340px;
 		margin-top: -302px;
-
+    }
+    .Vietnamese img{
+    	width: 300px;
+    	height: 300px;
     }
     /*Contents - Filipino*/
     .Filipino{
     	float: none;
 		width: 300px;
 		height: 300px;
-		border: 1px solid #111111;
+		border: 1px solid #ffffff;
 		text-align: center;
 		margin-left: 655px;
 		margin-top: -302px;
-
-
+    }
+    .Filipino img{
+    	width: 300px;
+    	height: 300px;
     }
     /*Contents - Chinese*/
     .Chinese{
     	float: none;
 		width: 300px;
 		height: 300px;
-		border: 1px solid #111111;
+		border: 1px solid #ffffff;
 		text-align: center;
 		margin-left: 970px;
 		margin-top: -302px;
+    }
+    .Chinese img{
+    	width: 300px;
+    	height: 300px;
     }
     /*Contents - Malaysia*/
     .Malaysian{
     	float: none;
 		width: 300px;
 		height: 300px;
-		border: 1px solid #111111;
+		border: 1px solid #ffffff;
 		text-align: center;
 		margin-top: 10px;
 		margin-left: 25px;
-
+    }
+    .Malaysian img{
+    	width: 300px;
+    	height: 300px;
     }
     /*Contents - Indonesia*/
     .Indonesian{
     	float: none;
 		width: 300px;
 		height: 300px;
-		border: 1px solid #111111;
+		border: 1px solid #ffffff;
 		text-align: center;
 		margin-left: 340px;
 		margin-top: -302px;
+    }
+    .Indonesian img{
+    	width: 300px;
+    	height: 300px;
     }
     /*Contents - Japanese*/
     .Japanese{
     	float: none;
 		width: 300px;
 		height: 300px;
-		border: 1px solid #111111;
+		border: 1px solid #ffffff;
 		text-align: center;
 		margin-left: 655px;
 		margin-top: -302px;
-
-
+    }
+    .Japanese img{
+    	width: 300px;
+    	height: 300px;
     }
     /*Contents - Chinese*/
     .Singaporean{
     	float: none;
 		width: 300px;
 		height: 300px;
-		border: 1px solid #111111;
+		border: 1px solid #ffffff;
 		text-align: center;
 		margin-left: 970px;
 		margin-top: -302px;
     }
+    .Singaporean img{
+    	width: 300px;
+    	height: 300px;
+    }
+
+
 /* Footer */
 .footer{
 	position: relative;
 	width: 100%;
     height: 50px;
-	background: green;
-	border: 2px solid black;
-	margin-top: 5px;
-	margin-bottom: 5px; 
-	text-align: center;
+	margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #D0F5A9;
+    background: #D0F5A9;
+    margin-top: -5px;
 }
+.footer-text ul li{
+	display: inline;
+	float:right;
+	margin-top: 12.5px;
+	margin-right: 30px;
+}
+
+.footer-text a{
+   text-align: center;
+   color: black;
+   text-decoration: none;
+}
+.footer-text a:hover{
+	background: #E6E6E6;
+	color: #3A9CF2;
+    text-decoration: underline;
+}
+
